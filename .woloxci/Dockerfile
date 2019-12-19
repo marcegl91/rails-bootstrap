@@ -1,14 +1,12 @@
-FROM ruby:2.6.1
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+FROM ruby
 
-WORKDIR /tmp
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
-RUN bundle install
-
-ADD . /myapp
+RUN mkdir /myapp
 WORKDIR /myapp
+COPY Gemfile .
+COPY Gemfile.lock .
+RUN bundle install
+COPY . .
 
-RUN chmod a+rw /myapp
-
+# Bundler will raise an error if it does not have writable permissions in HOME
 ENV HOME /myapp
+RUN chmod a+rw /myapp
