@@ -1,4 +1,4 @@
-RailsGraphqlBootstrap
+RailsBootstrap
 ===============
 
 Kickoff for Rails web applications.
@@ -18,8 +18,8 @@ You can skip the hook by adding `--no-verify` to your `git push`.
 
 ### 1- Installing Ruby
 
-- Clone the repository by running `git clone git@github.com:Wolox/rails-graphql-bootstrap.git`
-- Go to the project root by running `cd rails-graphql-bootstrap`
+- Clone the repository by running `git clone git@github.com:Wolox/rails-bootstrap.git`
+- Go to the project root by running `cd rails-bootstrap`
 - Download and install Rbenv and Ruby-Build as instructed by [GoRails guide](https://gorails.com/setup).
 - Install the appropriate Ruby version by running `rbenv install`.
 
@@ -55,7 +55,7 @@ Run in terminal:
 
 ```bash
 sudo -u postgres psql
-CREATE ROLE "rails-graphql-bootstrap" LOGIN CREATEDB PASSWORD 'rails-graphql-bootstrap';
+CREATE ROLE "rails-bootstrap" LOGIN CREATEDB PASSWORD 'rails-bootstrap';
 ```
 
 Log out from postgres and run:
@@ -155,7 +155,7 @@ This project is maintained by [Wolox](https://github.com/wolox) and it is writte
 
 ## License
 
-**rails-graphql-bootstrap** is available under the MIT [license](LICENSE).
+**rails-bootstrap** is available under the MIT [license](LICENSE).
 
     Copyright (c) 2019 X <X@wolox.com.ar>
 
